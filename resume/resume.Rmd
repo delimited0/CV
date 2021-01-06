@@ -4,20 +4,24 @@ surname: Ding
 # position: "Professor"
 address: "Texas A&M University, Department of Statistics"
 # phone: +1 22 3333 4444
-# www: mariecurie.com
+www: "patrickding.netlify.app/"
 email: "patrickding00@gmail.com"
 # twitter: patrickding00
 github: delimited0
 linkedin: patrick-ding-4a855065
 date: "`r format(Sys.time(), '%B %Y')`"
-headcolor: 000000
-output: vitae::awesomecv
+headcolor: "000000"
+output: 
+  vitae::awesomecv:
+    keep_tex: true
+docname: Resume
 params:
   bib_engine: "bibtex"
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+options(tinytex.clean = FALSE)
 library(vitae)
 library(dplyr)
 library(readr)
@@ -57,6 +61,18 @@ projects <- projects_raw %>%
   ))
 ```
 
+```{r load education, include=FALSE}
+edu_raw <- read_csv(here::here("data", "education.csv"))
+edu <- edu_raw %>%
+  mutate(Start = zoo::as.yearmon(Start, "%m/%d/%y"),
+         End = zoo::as.yearmon(End, "%m/%d/%y")) %>%
+  mutate(When = case_when(
+    is.na(End) & !is.na(Start) ~ glue("{Start}--Present") %>% as.character(),
+    !is.na(End) & !is.na(Start) ~ glue("{Start}--{End}") %>% as.character()
+  )) %>%
+  arrange(desc(End))
+```
+
 ```{r load skills, include = FALSE}
 skills <- read_csv(here::here("data", "skills.csv"))
 ```
@@ -64,20 +80,8 @@ skills <- read_csv(here::here("data", "skills.csv"))
 # Education
 
 ```{r education}
-tribble(
-  ~ Degree, ~ Year, ~ Institution, ~ Where,
-  
-  "PhD Statistics", 
-  "Aug 2017 - 2022 (expected)", 
-  "Texas A&M University", 
-  "College Station, Texas", 
-  
-  "BSE Operations Research and Financial Engineering", 
-  "Sep 2011 - Jun 2015", 
-  "Princeton University", 
-  "Princeton, New Jersey"
-) %>% 
-  detailed_entries(Degree, Year, Institution, Where)
+edu %>% 
+  detailed_entries(Degree, When, Institution, Where, Why)
 ```
 
 # Experience
@@ -117,15 +121,19 @@ pubs <- scholar::get_publications(scholar_id) %>%
   transmute(bibtype = "Article", author = as.character(author),
             title = as.character(title),
             journal = as.character(journal), year, key = row_number()) %>%
-  mutate(author = str_replace(author, "P Ding", "\\\\textbf{P Ding}")) %>%
+  mutate(author = str_replace(author, 
+                              "P Ding", 
+                              "\\\\textbf{P Ding}")) %>%
   mutate(bib = paste0(author, " (", year, "). ", title, ". ", 
                       "\\textit{", journal, "}. "))
 
+pubs$bib[1] <- paste0("\\vspace{-4mm}", pubs$bib[1]) 
+
 pubs %>%
   detailed_entries(
-    what = journal, 
-    when = year, 
-    with = title, 
+    # what = journal, 
+    # when = year, 
+    # with = paste0("Published", "\\vspace{-4mm}"),
     # where = journaltitle, 
     why = bib,
     .protect = FALSE
@@ -136,7 +144,8 @@ pubs %>%
 
 ```{r skills} 
 skills %>%
-  detailed_entries(what = Software, with = Type, .protect = FALSE)
+  # detailed_entries(why = Software, what = Type, .protect = FALSE)
+  brief_entries(what = Software, when = Type, .protect = FALSE)
 ```
 
 

@@ -1,3 +1,4 @@
 Type,Software
-Programming Languages,R – Python – Matlab – Rcpp
-Other,Git – Markdown – LaTeX – Rstudio
+R,Rcpp – RcppArmadillo – data.table – dplyr – ggplot2 – mlr – rmarkdown – Rstudio
+Python,Numpy – matplotlib – PyTorch – JAX
+Other,Git – Markdown – LaTeX – Unix – Bash – SSH – Matlab – Stan

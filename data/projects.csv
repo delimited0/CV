@@ -1,5 +1,9 @@
 Title,Start,End,Author,Details
-Multivariate Gaussian probability and sampling review,03/01/20,,"Patrick Ding, Debdeep Pati",Compared state of the art algorithms for high dimensional multivariate Gaussian sampling and probability estimation
-Multivariate Gaussian probability and sampling review,03/01/20,,"Patrick Ding, Debdeep Pati",Translated algorithm implementations in Matlab and Python to Rcpp and distributed in R packages
-Word vectors for variational autoencoding topic modeling,09/01/18,01/01/19,"Kristyn Pantoja, Patrick Ding",Investigated the benefits of combining word embeddings and autoencoding topic models
-Word vectors for variational autoencoding topic modeling,09/01/18,01/01/19,"Kristyn Pantoja, Patrick Ding",Implemented variational autoencoding topic models using pytorch
+Multivariate Gaussian probability and sampling,01/01/20,,Statistics Research,Reviewed two dozen algorithms for high dimensional multivariate Gaussian sampling and probability estimation
+Multivariate Gaussian probability and sampling,01/01/20,,Statistics Research,Translated half dozen algorithm implementations from Matlab and Python to C++ and distributed in R packages
+Multivariate Gaussian probability and sampling,01/01/20,,Statistics Research,Extending expectation propagation for multivariate Gaussian polytope probability estimation
+Multivariate Gaussian probability and sampling,01/01/20,,Statistics Research,Applying normalizing flows to multivariate Gaussian probability estimation and sampling
+Semi implicit variational approximation applications,03/01/19,12/01/19,Deep Learning Research,Investigated semi-implicit variational approximations for posterior inference of Bayesian neural networks in PyTorch
+Semi implicit variational approximation applications,03/01/19,12/01/19,Deep Learning Research,Developed semi-implicit density regression model in PyTorch
+Word vectors for variational autoencoding topic modeling,09/01/18,01/01/19,Deep learning course project,Investigated the benefits of combining word embeddings and autoencoding topic models
+Word vectors for variational autoencoding topic modeling,09/01/18,01/01/19,Deep learning course project,Implemented variational autoencoding topic models using PyTorch
