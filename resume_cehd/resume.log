@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.5.18)  18 MAY 2021 22:18
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.5.18)  18 MAY 2021 22:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -926,11 +926,11 @@ t line 133.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(2)/m/it' will be
 (Font)              scaled to size 8.0pt on input line 133.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(2)/b/n' will be
-(Font)              scaled to size 9.0pt on input line 184.
+(Font)              scaled to size 9.0pt on input line 181.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(1)/m/n' will be
-(Font)              scaled to size 9.0pt on input line 191.
+(Font)              scaled to size 9.0pt on input line 188.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(1)/b/n' will be
-(Font)              scaled to size 9.0pt on input line 191.
+(Font)              scaled to size 9.0pt on input line 188.
 [1
 
 ] (./resume.aux)
@@ -940,7 +940,7 @@ Package rerunfilecheck Info: File `resume.out' has not changed.
 Here is how much of TeX's memory you used:
  31717 strings out of 478764
  629742 string characters out of 5863951
- 1116762 words of memory out of 5000000
+ 1115762 words of memory out of 5000000
  51190 multiletter control sequences out of 15000+600000
  407730 words of font info for 110 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191

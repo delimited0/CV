@@ -1,4 +1,4 @@
 Type,Software
-R,Rcpp – RcppArmadillo – data.table – dplyr – ggplot2 – mlr – rmarkdown – Rstudio
-Python,Numpy – matplotlib – PyTorch – JAX
+R,Rcpp – RcppArmadillo – data.table – dplyr – ggplot2 – mlr – R Markdown – Rstudio
+Python,NumPy – matplotlib – PyTorch – JAX
 Other,Git – Markdown – LaTeX – Unix – Bash – SSH – Matlab – Stan

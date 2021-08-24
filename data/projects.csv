@@ -7,3 +7,5 @@ Semi implicit variational approximation applications,03/01/19,12/01/19,Deep Lear
 Semi implicit variational approximation applications,03/01/19,12/01/19,Deep Learning Research,Developed semi-implicit density regression model in PyTorch
 Word vectors for variational autoencoding topic modeling,09/01/18,01/01/19,Deep learning course project,Investigated the benefits of combining word embeddings and autoencoding topic models
 Word vectors for variational autoencoding topic modeling,09/01/18,01/01/19,Deep learning course project,Implemented variational autoencoding topic models using PyTorch
+Topic Modeling the Daily Princetonian,07/01/15,07/01/16,Personal Project,Scraped thousands of Daily Princetonian articles and comments using Beautiful Soup and Selenium
+Topic Modeling the Daily Princetonian,07/01/15,07/01/16,Personal Project,Implemented Gibbs sampler in C++ for topic model to infer article and comment topics

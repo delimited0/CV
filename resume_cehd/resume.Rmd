@@ -104,6 +104,7 @@ jobs %>%
 
 ```{r projects}
 projects %>%
+  filter(!(Title %in% c("Semi implicit variational approximation applications"))) %>%
   detailed_entries(
     what = Author,
     when = When,

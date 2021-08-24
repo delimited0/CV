@@ -47,19 +47,20 @@ jobs <- jobs_raw %>%
   mutate(When = case_when(
     is.na(End) & !is.na(Start) ~ glue("{Start}--Present") %>% as.character(),
     !is.na(End) & !is.na(Start) ~ glue("{Start}--{End}") %>% as.character()
-  ))
+  )) %>%
+  .[c(1:4, 7), ]
 ```
 
 ```{r load projects, include=FALSE}
 projects_raw <- read_csv(here::here("data", "projects.csv"))
 projects <- projects_raw %>%
-  filter(Title != "Topic Modeling the Daily Princetonian") %>%
   mutate(Start = zoo::as.yearmon(Start, "%m/%d/%y"),
          End = zoo::as.yearmon(End, "%m/%d/%y")) %>%
   mutate(When = case_when(
     is.na(End) & !is.na(Start) ~ glue("{Start}--Present") %>% as.character(),
     !is.na(End) & !is.na(Start) ~ glue("{Start}--{End}") %>% as.character()
-  ))
+  )) %>%
+  .[-4, ]
 ```
 
 ```{r load education, include=FALSE}
