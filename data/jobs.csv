@@ -1,5 +1,7 @@
 Start,End,Role,Company,Where,Tag,Why
-06/01/21,08/20/21,Data Science Intern,Microsoft,"Seattle, WA",Data science,
+06/01/21,08/20/21,Data Science Intern,Microsoft,"Seattle, WA",Data science,Evaluated double machine learning for estimating device specific effect of operating system update from AB test data
+06/01/21,08/20/21,Data Science Intern,Microsoft,"Seattle, WA",Data science,Processed hundreds of GB of device telemetry data using Spark
+06/01/21,08/20/21,Data Science Intern,Microsoft,"Seattle, WA",Data science,Communication placeholder
 05/21/18,08/10/18,Data Science Intern,Adobe,"Lehi, UT",Data science,"Implemented Monte Carlo estimators of KL divergence between MCMC, variational Bayes, and MAP posteriors of state space models using R, Stan, and C++"
 05/21/18,08/10/18,Data Science Intern,Adobe,"Lehi, UT",Data science,Evaluated machine learning models for predicting loss of accuracy of approximate inference algorithms for state space models
 05/21/18,08/10/18,Data Science Intern,Adobe,"Lehi, UT",Data science,Demonstrated viability of model for predicting when MAP gives accurate estimates
